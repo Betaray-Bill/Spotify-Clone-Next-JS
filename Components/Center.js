@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react'
 import React, { useState, useEffect } from 'react'
 import { shuffle } from "lodash"
 import { useRecoilValue , useRecoilState} from 'recoil'
-import { playlistAtom, playlistAtomState, playlistIdState } from '../atom/playlistAtom'
+import { playlistAtomState, playlistIdState } from '../atom/playlistAtom'
 import useSpotify from '../hooks/useSpotify'
 import Songs from './Songs'
 
@@ -55,7 +55,7 @@ function Center() {
         </div>
       </section>
 
-      <div>
+      <div className="space-x-8 pl-8 pr-8 ">
         <Songs />
       </div>
     </div>

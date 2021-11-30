@@ -24,7 +24,7 @@ function Sidebar() {
     return (
         <div className="p-5 text-sm text-gray-400 border-r 
                 border-gray-800 overflow-y-scroll h-screen scrollbar-hide
-                sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex
+                sm:max-w-[400px] lg:max-w-[200px] hidden md:inline-flex
         ">
             <div className="space-y-4">
                 <svg viewBox="0 0 1134 340" className="text-white mb-5">
@@ -70,7 +70,7 @@ function Sidebar() {
                     
                     playlist.map((e, _i) => (
                         <p className="cursor-pointer hover:text-white" key={_i} onClick={() => setPlaylistId(e.id)}>
-                            {e.name.length > 20 ? e.name.substring(0,20)+points : e.name}
+                            {e.name.length > 20 ? e.name.substring(0,16)+points : e.name}
                         </p>
                     ))
                 }
